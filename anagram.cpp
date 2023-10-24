@@ -22,7 +22,7 @@ vector<string> loadWordlist(string filename);
   set of anagrams
 */
 vector<string> anagram(string word, vector<string> wordlist);
-
+/*
 int main()
 {
     vector<string> words;
@@ -38,7 +38,7 @@ int main()
     }
     return 0;
 }
-
+*/
 vector<string> loadWordlist(string filename)
 {
     vector<string> words;
