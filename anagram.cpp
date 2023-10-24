@@ -8,7 +8,7 @@
 #include <fstream>
 #include <vector>
 #include <unordered_map>
-
+#include <algorithm>
 using namespace std;
 
 vector<string> loadWordlist(string filename);
@@ -69,15 +69,15 @@ vector<string> anagram(string word, vector<string> wordlist)
   The value returned is a vector of strings containing the corresponding
   set of anagrams
   */
-    unordered_map<string word, vector<string>> anagramDict;
+    unordered_map<string, vector<string>> anagramDict;
     //populate the dictionary with words 
     
-    for(const string& w : worlist ) {
+    for(const string& w : wordlist ) {
      string representation = w;
-        sort(reprentation.begin(), representation.end());
+        sort(representation.begin(), representation.end());
         
         //check if representation exists in the dictionary
-        if(anagram.Dict.find(representation) == anaramDict.end()) {
+        if(anagramDict.find(representation) == anagramDict.end()) {
             anagramDict[representation] = {w};
             
         }
@@ -89,7 +89,7 @@ vector<string> anagram(string word, vector<string> wordlist)
     }
      // Find and return anagrams of the input word
     string wordRepresentation = word;
-    sort(wordRepresentation.begin(), wordRepresentation.end()) 
+    sort(wordRepresentation.begin(), wordRepresentation.end());
         if(anagramDict.find(wordRepresentation) != anagramDict.end()) {
             return anagramDict[wordRepresentation];   
         }
